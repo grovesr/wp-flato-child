@@ -13,13 +13,13 @@ function flato_child_enqueue_styles() {
 	$theme        = wp_get_theme();
 	$parenthandle = 'themememe-base';
 	wp_enqueue_style( 'themememe-child-base',
-		get_stylesheet_uri() . '/css/base.css',
+		get_stylesheet_directory_uri() . '/css/base.css',
 		array( $parenthandle ),
 		$theme->get( 'Version' ) // This only works if you have Version defined in the style header.
 	);
 	$parenthandle = 'themememe-icons';
 	wp_enqueue_style( 'themememe-child-icons',
-		get_stylesheet_uri() . '/css/font-awesome.min.css',
+		get_stylesheet_directory_uri() . '/css/font-awesome.min.css',
 		array( $parenthandle ),
 		$theme->get( 'Version' ) // This only works if you have Version defined in the style header.
 	);
